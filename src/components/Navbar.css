@@ -1,0 +1,50 @@
+@import url('../index.css');
+
+.Navbar {
+  background-color:tomato;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 16vh;
+  min-width: 90%;
+}
+
+.Navbar-logo {
+  height: 10vh;
+  pointer-events: none;
+}
+
+.Navbar-list{
+  list-style: none;
+  display:flex;
+}
+
+.Navbar-list li{
+  margin:16px;
+  font-size: var(--h3-font-size);
+}
+
+.Navbar-list li a{
+  text-decoration: none;
+  color: inherit;
+  transition: .3;
+}
+
+.Navbar-list li a:hover{
+  color: skyblue;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Navbar-logo {
+    animation: Nav-logo-spin infinite 3s linear;
+  }
+}
+
+@keyframes Nav-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
