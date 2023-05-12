@@ -1,0 +1,13 @@
+.App{
+  min-height: 200vh;
+}
+
+.navbar{
+  position:fixed;
+  width: 100%;
+  height: auto;
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: center;
+}

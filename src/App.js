@@ -1,13 +1,20 @@
-import Nav from './components/Navbar';
 import Home from './components/Home';
+import About from './components/About';
+import Navbar from './components/Navbar';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Nav></Nav> */}
-      <Home></Home>
-    </div>
+    <>
+      <div className = "navbar">
+        <Navbar></Navbar> 
+      </div>
+      <div className="App">
+        <Home></Home>
+        <About></About>
+      </div>
+    </>
   );
 }
 

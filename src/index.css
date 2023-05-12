@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root{
@@ -8,9 +8,10 @@
   --primary-font : 'Jost', sans-serif;
   --biggest-font-size: 2rem;
   --bigger-font-size: 1.25rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
+  --h1-font-size: 4rem;
+  --h2-font-size: 3rem;
+  --h3-font-size: 2rem;
+  --p-font-size: 1rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
@@ -20,6 +21,7 @@
   --font-medium:500;
   --font-semibold:600;
 
+  --primary-color:#08fdd8;
 }
 
 /*========== Responsive typography ==========*/
@@ -38,10 +40,16 @@
 
 *{
   font-family: var(--primary-font);
+  color: white;
+  scroll-behavior: smooth;
 }
 
 body {
+  background-color: #000;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -56,4 +64,9 @@ h2 {
 
 h3 {
   font-size: var(--h3-font-size);
+}
+
+p{
+  font-size: var(--p-font-size);
+  font-weight: var(--font-regular);
 }
