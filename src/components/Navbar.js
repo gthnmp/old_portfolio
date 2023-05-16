@@ -1,29 +1,36 @@
-import logo from '../assets/logo.svg';
+import React, { useState } from 'react';
 import './Navbar.css';
+import '../App';
 
-function Navbar() {
+function Navbar({handleNavigation, activePageId}) {
+
+  function handleClick(id) {
+    handleNavigation(id);
+  }
+
   return (
-      <header className = "Navbar">
-        <img src={logo} className="Navbar-logo" alt="logo" />
-        
-        <ul className = "Navbar-list">
-          <li>
-            <a href="google.com">About</a>
-          </li>
-          <li>
-            <a href="google.com">My Skills</a>
-          </li>
-          <li>
-            <a href="google.com">Work</a>
-          </li>
-          <li>
-            <a href="google.com">Contact</a>
-          </li>
-          <li>
-            <a href="google.com">Blog</a>
-          </li>
-        </ul>
-      </header>
+    <header className="Navbar">
+      <ul className="Navbar-list">
+        <li>
+          <button
+            id="home"
+            className={`nav-button ${activePageId === "home" ? "active" : ""}`}
+            onClick={() => handleClick("home")}
+          >
+            Works
+          </button>
+        </li>
+        <li>
+          <button
+            id="about"
+            className={`nav-button ${activePageId === "about" ? "active" : ""}`}
+            onClick={() => handleClick("about")}
+          >
+            About
+          </button>
+        </li>
+      </ul>
+    </header>
   );
 }
 

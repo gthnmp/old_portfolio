@@ -21,10 +21,9 @@
   --font-medium:500;
   --font-semibold:600;
 
-  --primary-color:#08fdd8;
+  --primary-color:#fff;
 }
 
-/*========== Responsive typography ==========*/
 @media screen and (min-width: 1152px) {
   :root {
     --biggest-font-size: 4rem;
@@ -69,4 +68,15 @@ h3 {
 p{
   font-size: var(--p-font-size);
   font-weight: var(--font-regular);
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+#canvas{
+  min-height: 100vh;
+  min-width: 100%;
+  border:2px solid yellow;
+  background-color: transparent;
 }
