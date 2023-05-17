@@ -21,3 +21,7 @@
   align-items: center;
   color:white;
 }
+
+.image {
+  object-position: 100% center;
+}
