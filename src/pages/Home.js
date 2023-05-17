@@ -2,27 +2,22 @@
   import "./Home.css";
 
   const Home = () => {
-    const slideSpeed = 10;
-    const imageWidth = 30;
-    const imageHeight = 46;
-    const startingPositonPercentage = 50;
-    const finalPositionPerentage = 50 * 5;
-
-    const [deltaPosition, setDeltaPosition] = useState(0);
-    const [imageInnerPercent, setImageInnerPercent] = useState(0);
-    const containerRef = useRef(null);
+    const slideSpeed        = 10;
+    const imageWidth        = 30;
+    const imageHeight       = 46;
+    const containerRef      = useRef(null);
     const imageContainerRef = useRef(null);
+    const [deltaPosition, setDeltaPosition] = useState(0);
 
     const images = [  
-      "https://live.staticflickr.com/65535/52494118190_6514e13fd7_z.jpg",
-      "https://i.ytimg.com/vi/va7UMzMQbTQ/maxresdefault.jpg",
-      "https://redigest.web.id/wp-content/uploads/2022/04/P1150149.jpg",
-      "https://i.ytimg.com/vi/tk7VeMu-CRs/maxresdefault.jpg",
-      "https://i.ytimg.com/vi/d5NCOYuXgOw/maxresdefault.jpg",
-      "https://images.unsplash.com/photo-1664724492814-0b8de7d96142?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3Rhc2l1biUyMGphdGluZWdhcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-      "https://images.unsplash.com/photo-1663299388965-0fc86ce86ff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8a3JsJTIwamFib2RldGFiZWt8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-      "https://upload.wikimedia.org/wikipedia/commons/d/df/CC_206_15_01_at_Cipatat_Station.jpg",
-      "https://images.unsplash.com/photo-1664724852805-7c4b45522f70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3Rhc2l1biUyMGphdGluZWdhcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "https://images4.alphacoders.com/290/thumbbig-290324.webp",
+      "https://images3.alphacoders.com/198/thumbbig-198825.webp",
+      "https://images4.alphacoders.com/110/thumbbig-110756.webp",
+      "https://images7.alphacoders.com/435/thumbbig-435083.webp",
+      "https://images6.alphacoders.com/318/thumbbig-318263.webp",
+      "https://images.alphacoders.com/106/thumbbig-1067208.webp",
+      "https://images.alphacoders.com/484/thumbbig-484487.webp",
+      "https://images6.alphacoders.com/390/thumbbig-390255.webp",
     ];
 
     const imageStyle = {
@@ -48,18 +43,16 @@
         setDeltaPosition(newPosition);
         console.log(deltaPosition)
 
-        const percentage = (newPosition / (finalPositionPerentage - startingPositonPercentage)) * 100;
-        setImageInnerPercent(percentage);
-
         // Container sliding movement animation
         container.animate([{ transform: `translateX(calc(${50 + deltaPosition}% - ${imageWidth / 2}vmin))` }], {
-          duration: 1200,
+          duration: 1000,
           fill: "forwards",
         });
 
+        let imageMovingPercetage = Math.max(-100, deltaPosition)
         images.forEach((image) => {
-          image.animate([{ objectPosition: `${100 + deltaPosition} center`}], {
-            duration: 1000,
+          image.animate([{ objectPosition: `${100 + imageMovingPercetage}% center`}], {
+            duration: 1200,
             fill: "forwards",
           })
         })
@@ -73,7 +66,7 @@
       return () => {
         canvas.removeEventListener("wheel", slider);
       };
-    }, [deltaPosition, finalPositionPerentage]);
+    }, [deltaPosition]);
 
     return (
       <>
