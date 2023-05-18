@@ -9,7 +9,7 @@ function Home() {
           <div className = "section-text">
             <h1>Hello, I am</h1>
             <h1>Jue Viole Grace</h1>
-            <h3>System Administrator   & Visual Editor</h3>
+            <p>I like planes</p>
           </div>
           <div className = "section-button">
             <a href = "/">Let's talk</a>
