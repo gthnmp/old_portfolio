@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Navbar.css';
-import '../App';
+import '../../App';
 
-function Navbar({handleNavigation, activePageId}) {
+function Navbar({ handleNavigation, activePageId }) {
 
   function handleClick(id) {
     handleNavigation(id);

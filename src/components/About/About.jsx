@@ -1,15 +1,14 @@
-import './Main.css';
 import './About.css';
 
-function Home() {
+function About() {
   return (
     <>
-      <section className="Home">
-        <section className="Home-section">
+      <section className="About">
+        <section className="About-section">
           <div className = "section-text">
             <h1>Hello, I am</h1>
-            <h1>Jue Viole Grace</h1>
-            <p>I like planes</p>
+            <h1>Gathan Mahesa</h1>
+            <h3>System Administrator   & Visual Editor</h3>
           </div>
           <div className = "section-button">
             <a href = "/">Let's talk</a>
@@ -20,4 +19,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;

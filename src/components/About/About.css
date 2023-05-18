@@ -1,27 +1,26 @@
-@import url('../index.css');
-
 *::selection{
   background-color: var(--primary-color);
   color:black;
 }
 
-.Home {
+.About {
   text-align: center;
 }
 
-.Home h1 {
+.About h1 {
+  font-size: 4rem;
   margin:1px;
 }
-.Home h3 {
+.About h3 {
   font-size: 2rem;
   font-weight: var(--font-regular);
 }
 
-.Home p {
+.About p {
   font-weight: 400;
 }
 
-.Home video {
+.About video {
   position: absolute;
   top: 0;
   left:0;
@@ -41,7 +40,7 @@
   z-index: -1;
 }
 
-.Home-section {
+.About-section {
   /* background-color: #282c34; */
   background-color: transparent !important;
   min-height: 100vh;
