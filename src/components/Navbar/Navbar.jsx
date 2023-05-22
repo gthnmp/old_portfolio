@@ -1,37 +1,18 @@
 import React from 'react';
 import './Navbar.css';
-import '../../App';
 
-function Navbar({ handleNavigation, activePageId }) {
-
-  function handleClick(id) {
-    handleNavigation(id);
-  }
-
+export default function Navigation() {
   return (
-    <header className="Navbar">
-      <ul className="Navbar-list">
-        <li>
-          <button
-            id="home"
-            className={`nav-button ${activePageId === "home" ? "active" : ""}`}
-            onClick={() => handleClick("home")}
-          >
-            Works
-          </button>
-        </li>
-        <li>
-          <button
-            id="about"
-            className={`nav-button ${activePageId === "about" ? "active" : ""}`}
-            onClick={() => handleClick("about")}
-          >
-            About
-          </button>
-        </li>
-      </ul>
-    </header>
-  );
+    <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
+      <a href="https://github.com/gthnmp" target='_blank' style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }} rel="noreferrer">
+        Gathan Mahesa
+        <br />
+        Front-end Developer 
+      </a>
+      <a href = "/about" style={{ position: 'absolute', top: 40, right: 40, fontSize: '13px'}}>— about</a>
+      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>gthnmp —</div>
+      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>2023</div>
+    </div>
+  )
 }
 
-export default Navbar;
