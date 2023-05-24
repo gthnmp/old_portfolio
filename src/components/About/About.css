@@ -1,77 +1,47 @@
-*::selection{
-  background-color: var(--primary-color);
-  color:black;
-}
-
-.About {
-  text-align: center;
-}
-
-.About h1 {
-  font-size: 4rem;
-  margin:1px;
-}
-.About h3 {
-  font-size: 2rem;
-  font-weight: var(--font-regular);
-}
-
-.About p {
-  font-weight: 400;
-}
-
-.About video {
-  position: absolute;
-  top: 0;
-  left:0;
+.about {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+
+  display: grid;
+  grid-template-areas: ". content .";
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  background-color:rgba(0,0,0,.8  );
-  z-index: -1;
+.main {
+  display:grid;
+
+  grid-template-areas: 
+          "intro"
+          "experiences"
+          "certifications"
+          "technologies"
+          "contacts";
+  
+  grid-template-rows: repeat(5, 1fr);
+
+  gap : 40vh;
 }
 
-.About-section {
-  /* background-color: #282c34; */
-  background-color: transparent !important;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  scale: .8;
-  /* border:solid 2px skyblue !important; */
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
+h1,h2,i {
+  color:rgb(240, 238, 238);
 
-.section-button {
-  /* border : 2px solid tomato; */
-  margin:20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
-.section-button a{
-  padding:10px 80px;
-  text-decoration: none;
-  color:white;
-  border: 2px solid white;
-  transition: .2s background-color ease-in-out;
-  font-weight: 300;
+ul {
+  list-style-type: none;
 }
 
-.section-button a:hover{
-  background-color: white;
-  color: black;
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color : white;
 }

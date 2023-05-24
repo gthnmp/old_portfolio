@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import * as THREE from 'three';
 import './Preloader.css';
+
+const LINE_COLOR = "white";
+
+const material = new THREE.LineBasicMaterial({ color : LINE_COLOR});
+// const geometry 
+
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);

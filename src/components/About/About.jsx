@@ -1,12 +1,11 @@
+import Main from './Main';
 import './About.css';
 
 function About() {
   return (
-    <>
-      <section>
-
-      </section>
-    </>
+    <section className = 'about'>
+      <Main/>
+    </section>
   );
 }
 
