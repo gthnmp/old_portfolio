@@ -37,11 +37,3 @@ h1,h2,i {
 ul {
   list-style-type: none;
 }
-
-a {
-  transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-  color : white;
-}

@@ -26,8 +26,8 @@ export default function Navigation() {
       <a onClick={handleClick} style={{ position: 'absolute', top: 40, right: 40, fontSize: '13px'}}>
         {isClicked ? '— about' : '— close'}
       </a>
-      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>gthnmp —</div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>2023</div>
+      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px', pointerEvents: 'none' }}>gthnmp —</div>
+      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px', pointerEvents: 'none' }}>2023</div>
     </div>
   )
 }

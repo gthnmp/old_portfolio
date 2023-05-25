@@ -1,4 +1,10 @@
 a {
   text-decoration: none;
   pointer-events: all;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  cursor: pointer;
+  color : white;
 }

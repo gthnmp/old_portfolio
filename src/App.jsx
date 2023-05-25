@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <main className="App">
+        <Preloader/>
           <Routes>
             <Route path = "/" element = {<Works/>}/>
             <Route path = "/about" element = {<About/>}/>
