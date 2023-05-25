@@ -3,22 +3,22 @@ const Techstack = () => {
     'React JS',
     'Javascript',
     'Python',
-    'Firebase',
     'JSON',
+    'Firebase',
     'OpenAI API',
     'Three JS',
     'WebGL',
     'Apache',
-    'Linode',
-    'Adobe Photoshop',
-    'Adobe Illustrator',
-    'Adobe Premiere'
+    'Nginx',
+    'Photoshop',
+    'Illustrator',
+    'Premiere'
   ];
 
   return (
     <div className="section techstack">
       <h1>Technologies</h1>
-      <p>A brief list of technologies I use</p>
+      <p>A brief list of technologies I frequently use</p>
       <ul>
         {technologies.map((technology, index) => (
           <li key={index}>{technology}</li>

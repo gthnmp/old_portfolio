@@ -1,0 +1,34 @@
+.container {
+  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#image-container{
+  display: flex;
+  gap:5vmin;
+}
+
+#canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#cross {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+
+.image {
+  object-position: 100% center;
+}

@@ -8,3 +8,9 @@ a:hover {
   cursor: pointer;
   color : white;
 }
+
+.bottom-part {
+  @media (max-width : 500px) {
+    display: none;
+  }
+}

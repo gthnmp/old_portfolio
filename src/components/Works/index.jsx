@@ -1,1 +1,1 @@
-export { default } from './works-components/HorizontalTiles';
+export { default } from './Works';

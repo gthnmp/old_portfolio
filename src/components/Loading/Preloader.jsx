@@ -28,7 +28,6 @@ const Preloader = () => {
   return (
     <div className={`preloader ${isLoading ? 'show' : 'hide'}`}>
       <div className="loader"></div>
-      <p >{loadingNumber}</p>
     </div>
   );
 };

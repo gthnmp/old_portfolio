@@ -1,34 +1,38 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState }from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navigation() {
-  const [ isClicked , setIsClicked ] = useState(true);
+  const [isClicked, setIsClicked] = useState(true);
   const navigate = useNavigate();
 
-  function handleClick (){
+  const handleClick = () => {
     setIsClicked(!isClicked);
-    if (isClicked){
-      navigate('/about');
-    } else {
-      navigate('/')
-    }
-  }
+    navigate(isClicked ? '/about' : '/');
+  };
+
+  const textStyle = {
+    position: 'absolute',
+    fontSize: '13px',
+  };
 
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-      <a href="https://github.com/gthnmp" target='_blank' style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }} rel="noreferrer">
+    <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}>
+      <a
+        href="https://github.com/gthnmp"
+        target="_blank"
+        rel="noreferrer"
+        style={{ ...textStyle, top: 40, left: 40 }}
+      >
         Gathan Mahesa
         <br />
-        Front-end Developer 
+        Front-end Developer
       </a>
-      <a onClick={handleClick} style={{ position: 'absolute', top: 40, right: 40, fontSize: '13px'}}>
+      <a onClick={handleClick} style={{ ...textStyle, top: 40, right: 40 }}>
         {isClicked ? '— about' : '— close'}
       </a>
-      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px', pointerEvents: 'none' }}>gthnmp —</div>
-      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px', pointerEvents: 'none' }}>2023</div>
+      <div className = 'bottom-part' style={{ ...textStyle, bottom: 40, left: 40, pointerEvents: 'none' }}>gthnmp —</div>
+      <div className = 'bottom-part' style={{ ...textStyle, bottom: 40, right: 40, pointerEvents: 'none' }}>2023</div>
     </div>
-  )
+  );
 }
-
